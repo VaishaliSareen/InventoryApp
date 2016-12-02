@@ -1,0 +1,62 @@
+<!-- File Name: addproduct.ejs
+Author's Name: Vaishali Sareen
+WebSite Name: https://productapplication.herokuapp.com/
+File Description: This page diplays the form to add the product -->
+<% include partials/header.ejs %> <!-- shared header -->
+<main class="container signup">
+<h1>Product Details</h1>
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+<form method="post">
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Name:</label>
+    <input name="name" id="name"  />
+  </div>
+  <div class="form-group">
+    <label for="Company" class="col-sm-2 control-label">Company:</label>
+    <select name="Company" id="Company">
+      <option>Apple</option>
+      <option>Samsung</option>
+      <option>Sony</option>
+      <option>LG</option>
+      <option>Google</option>
+      <option>Nokia</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="Price" class="col-sm-2 control-label">Price</label>
+    <input name="Price" id="Price"/>
+  </div>
+  <div class="form-group">
+    <label for="Ram" class="col-sm-2 control-label">RAM:</label>
+    <input name="Ram" id="Ram" />
+  </div>
+  <div class="form-group">
+    <label for="Processor" class="col-sm-2 control-label">Processor:</label>
+    <input name="Processor" id="Processor" />
+  </div>
+  <div class="form-group">
+    <label for="Color" class="col-sm-2 control-label">Color:</label>
+    <select name="Color" id="Color">
+      <option>Black</option>
+      <option>SpaceGrey</option>
+      <option>Gold</option>
+      <option>RoseGold</option>
+      <option>White</option>
+      <option>SolidGrey</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="Quantity" class="col-sm-2 control-label">Quantity:</label>
+    <input name="Quantity" id="Quantity"/>
+
+  </div>
+
+  <button class="btn btn-success col-sm-offset-2">Save</button>
+
+</form>
+  </div>
+  <div class="col-md-3"></div>
+</main>
+
+<% include partials/footer.ejs %><!-- shared header -->

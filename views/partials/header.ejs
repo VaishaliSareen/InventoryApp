@@ -1,0 +1,37 @@
+<!-- File Name: header.ejs
+Author's Name: Vaishali Sareen
+WebSite Name: https://productapplication.herokuapp.com/
+File Description: this is the shared header. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+</head>
+<body>
+<nav class="navbar top-nav">
+  <div class="container">
+  <ul class="nav navbar-nav">
+
+    <% if (!user){ %>
+    <li><a href="/">Home<i class="fa fa-home" aria-hidden="true"></i></a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/products">Products<i class="fa fa-list" aria-hidden="true"></i></a></li>
+    <li><a href="/register">Register</a></li>
+    <li><a href="/login">Login</a></li>
+<%}
+else{
+%>  <li><a href="/products">Products<i class="fa fa-list" aria-hidden="true"></i></a></li>
+    <li><a href="/logout">Logout</a></li>
+
+  </ul>
+    <div class="navbar-text pull-right">Welcome '<%= user.username %>' to the Application</div>
+    <% } %>
+
+  </div>
+</nav>
+</body>
+</html>

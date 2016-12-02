@@ -1,0 +1,46 @@
+<!-- File Name: products.ejs
+Author's Name: Vaishali Sareen
+WebSite Name: https://productapplication.herokuapp.com/
+File Description: This page displays the list of the products-->
+<% include partials/header.ejs %> <!-- shared header -->
+<div class="container product">
+<h1><%= title %></h1>
+ <!-- user is only allowed to add if they are logged in-->
+<% if(user){%>
+<a class="add" href="/products/add">Add a Product</a>
+<%}%>
+<!-- table to store the products model -->
+<table class="table data">
+  <tr class="bg-success">
+    <th>Name</th>
+    <th>Company</th>
+    <th>Price</th>
+    <th>Ram</th>
+    <th>Processor</th>
+    <th>Color</th>
+    <th>Stock Left</th>
+    <% if(user){%>
+    <th>Edit</th>
+    <th>Delete</th>
+<%}%>
+  </tr>
+  <% for (var i=0; i < products.length; i++) { %>
+  <tr>
+    <td><%= products[i].name %></td>
+    <td><%= products[i].Company %></td>
+    <td><%= products[i].Price %></td>
+    <td><%= products[i].Ram %></td>
+    <td><%= products[i].Processor %></td>
+    <td><%= products[i].Color %></td>
+    <td><%= products[i].Quantity %></td>
+<!-- users are only allowed to edit or delete the product if they are logged in -->
+    <% if(user){%>
+    <td><a href="/products/<%= products[i]._id %>">Edit</a></td>
+    <td><a href="/products/delete/<%= products[i]._id
+      %>" class="confirmation">Delete</a></td>
+    <%}%>
+  </tr>
+  <% } %>
+</table>
+</div>
+<% include partials/footer.ejs %> <!-- shared footer -->

@@ -1,0 +1,36 @@
+<!-- File Name: login.ejs
+Author's Name: Vaishali Sareen
+WebSite Name: https://productapplication.herokuapp.com/
+File Description: This page displays the form for the user to login to the application -->
+<% include partials/header.ejs %> <!-- shared header -->
+
+<main class="container signup">
+  <h1>Register</h1>
+
+  <div class="col-md-2"></div>
+
+  <div class="col-md-8">
+  <form method="post" id="validateForm">
+    <div class="form-group">
+      <label for="username" class="col-sm-2 control-label" ><i class="fa fa-user" aria-hidden="true"></i>Username: </label>
+      <input name="username" id="username" required />
+    </div>
+    <div class="form-group">
+      <label for="password" class="col-sm-2 control-label">Password: </label>
+      <input name="password" id="password" type="password" required />
+    </div>
+    <div class="form-group">
+      <label for="confirm" class="col-sm-2 control-label">Confirm: </label>
+      <input name="confirm" id="confirm" type="password" required />
+    </div>
+    <div class="form-group">
+      <button class="btn btn-success col-sm-offset-2">Register</button>
+      <hr />
+      </div>
+      Already have an account?  <a href="/login" title="Login">Login</a>
+  </form>
+  </div>
+  <div class="col-md-2"></div>
+</main>
+
+<% include partials/footer.ejs %> <!-- shared footer -->

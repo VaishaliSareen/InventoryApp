@@ -1,0 +1,77 @@
+<!-- File Name: editproducts.ejs
+Author's Name: Vaishali Sareen
+WebSite Name: https://productapplication.herokuapp.com/
+File Description: This page displays the form to edit the product details. -->
+<% include partials/header.ejs %> <!-- shared header -->
+<!-- this is the update form -->
+<main class="container signup">
+<h1>Product Details</h1>
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+<form method="post">
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Name:</label>
+    <input name="name" id="name" required value="<%= Product.name %>" />
+  </div>
+  <div class="form-group">
+    <label for="Company" class="col-sm-2 control-label">Company:</label>
+
+    <select name="Company" id="Company" >
+      <!-- thisis to load the drop-down value selected by the user which user will edit -->
+      <% var names = ['Apple', 'Samsung', 'Sony','LG','Google','Nokia'];
+      var selected = '';
+      for(var i=0; i<names.length; i++ )
+        {
+        if(names[i] == Product.Company){
+          selected = 'selected';
+        }
+        else
+        {
+          selected ='';
+        } %>
+      <option <%= selected %>><%= names[i]%></option>
+      <% }%>
+
+</select>
+  </div>
+  <div class="form-group">
+    <label for="Price" class="col-sm-2 control-label">Price</label>
+    <input name="Price" id="Price" value="<%= Product.Price %>" l/>
+  </div>
+  <div class="form-group">
+    <label for="Ram" class="col-sm-2 control-label">RAM:</label>
+    <input name="Ram" id="Ram" value="<%= Product.Ram %>" />
+  </div>
+  <div class="form-group">
+    <label for="Processor" class="col-sm-2 control-label">Processor:</label>
+    <input name="Processor" id="Processor" value="<%= Product.Processor %>"/>
+  </div>
+  <div class="form-group">
+    <label for="Color" class="col-sm-2 control-label">Color:</label>
+
+    <select name="Color" id="Color" >
+      <% var types = ['Black', 'SpaceGrey', 'Gold','RoseGold','White','SolidGrey'];
+      var selected = '';
+      for(var i=0; i<types.length; i++ )
+        {
+          if(types[i] == Product.Color){
+          selected = ' selected';
+        }
+        else
+        {
+          selected ='';
+        } %>
+      <option<%= selected %>><%= types[i]%></option>
+      <% }%>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="Quantity" class="col-sm-2 control-label">Quantity:</label>
+    <input name="Quantity" id="Quantity" value="<%= Product.Quantity%>"/>
+  </div>
+  <button class="btn btn-success col-sm-offset-2">Update</button>
+</form>
+    </div>
+  <div class="col-md-3"></div>
+</main>
+<% include partials/footer.ejs %><!-- shared footer -->

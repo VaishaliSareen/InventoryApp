@@ -1,0 +1,129 @@
+nav.navbar.top-nav {
+  background-color: #333;
+  border-radius: 0px;
+}
+
+nav.navbar.top-nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+nav.navbar.top-nav ul li a:hover,
+nav.navbar.top-nav ul li a:active,
+nav.navbar.top-nav ul li a:focus{
+  color:red;;
+  background-color: transparent;;
+}
+.navbar {
+   margin-bottom: 0;
+ }
+
+.product a.add {
+  background-color: #333;
+  padding: 15px 30px;
+  display: inline-block;
+  margin-bottom: 30px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.product a.add:hover {
+  background-color: red;;
+  color:#fff;
+  text-decoration: none;
+}
+
+body.bg {
+  background-image: url(/images/bg12.jpg);
+  background-size: cover;
+}
+.container.home h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 60px;
+    margin: 263px 0px 270px;
+}
+footer.bottom {
+  background-color: #333;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+
+  margin-top: 0px;
+}
+.signup.login {
+  margin-bottom: 120px;
+}
+table.table.data {
+  margin-bottom: 370px;
+}
+main.container.signup form input,
+main.container.signup form select{
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+}
+
+main.container.signup form label {
+  text-align: left;
+  font-size: 16px;
+  padding: 10px 0px;
+}
+
+main.container.signup form {
+  margin: 30px 0px;
+  text-align: center;
+}
+.signup h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+main.container.signup form button {
+  margin: 10px 0px;
+}
+.name h1{
+  font-size: 41px;
+  font-style: normal;
+  font-family: monospace;
+  color: cornflowerblue;
+  margin: 33px 10px;
+}
+.name h2{
+  font-size: 25px;
+  font-style: normal;
+  color: blue;
+  font-family: "sans-serif";
+  margin: 10px 10px;
+}
+.about p {
+  color: darkred;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 200;
+  margin: 50px 80px;
+  line-height: 50px;
+  font-family: serif;
+}
+.about {
+  background-image: url(/images/about.jpg);
+    color: whitesmoke;
+  text-align: center;
+    min-height: 620px;
+  background-color: #d1dadb;
+   background-size: cover;
+  background-repeat: no-repeat;}
+.navbar-text {
+    color: whitesmoke;
+  margin-right: 50%;
+
+  font-family: monospace;
+}
+.alert-danger{
+margin: 31px 139px;
+}
+.about h1{
+    color: lightgrey;
+}
+.navbar{
+  margin-bottom: 0% !important;
+}
