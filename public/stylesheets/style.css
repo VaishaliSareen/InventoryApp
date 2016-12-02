@@ -42,14 +42,7 @@ body.bg {
   font-size: 60px;
     margin: 263px 0px 270px;
 }
-footer.bottom {
-  background-color: #333;
-  text-align: center;
-  color: #fff;
-  padding: 20px;
 
-  margin-top: 0px;
-}
 .signup.login {
   margin-bottom: 120px;
 }
@@ -126,4 +119,12 @@ margin: 31px 139px;
 }
 .navbar{
   margin-bottom: 0% !important;
+}
+footer.navbar{
+  background-color: #333;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+
+  margin-top: 0px;
 }
